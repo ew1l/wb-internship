@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: smaller;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <dl>
+            <dt>Order UID: {{ .OrderUID }}</dt>
+            <dt>Track number: {{ .TrackNumber }}</dt>
+            <dt>Entry: {{ .Entry }}</dt>
+            <br>
+            
+            <dt>Delivery:</dt>
+                <dd>Name: {{ .Delivery.Name }}</dd>
+                <dd>Phone: {{ .Delivery.Phone }}</dd>
+                <dd>Zip: {{ .Delivery.Zip }}</dd>
+                <dd>City: {{ .Delivery.City }}</dd>
+                <dd>Address: {{ .Delivery.Address }}</dd>
+                <dd>Region: {{ .Delivery.Region }}</dd>
+                <dd>Email: {{ .Delivery.Email }}</dd>
+                <br>
+
+            <dt>Payment:</dt>
+                <dd>Transaction: {{ .Payment.Transaction }}</dd>
+                <dd>Request ID: {{ .Payment.RequestID }}</dd>
+                <dd>Currency: {{ .Payment.Currency }}</dd>
+                <dd>Provider: {{ .Payment.Provider }}</dd>
+                <dd>Amount: {{ .Payment.Amount }}</dd>
+                <dd>Payment DT: {{ .Payment.PaymentDT }}</dd>
+                <dd>Bank: {{ .Payment.Bank }}</dd>
+                <dd>Delivery cost: {{ .Payment.DeliveryCost }}</dd>
+                <dd>Goods total: {{ .Payment.GoodsTotal }}</dd>
+                <dd>Custom fee: {{ .Payment.CustomFee }}</dd>
+                <br>
+                
+            <dt>Items:</dt>
+                {{ range .Items }}
+                <dd>Chrt ID: {{ .ChrtID }}</dd>
+                <dd>Track number: {{ .TrackNumber }}</dd>
+                <dd>Price: {{ .Price }}</dd>
+                <dd>Rid: {{ .Rid }}</dd>
+                <dd>Name: {{ .Name }}</dd>
+                <dd>Sale: {{ .Sale }}</dd>
+                <dd>Size: {{ .Size }}</dd>
+                <dd>Total price: {{ .TotalPrice }}</dd>
+                <dd>Nm ID: {{ .NmID }}</dd>
+                <dd>Brand: {{ .Brand }}</dd>
+                <dd>Status: {{ .Status }}</dd>
+                <br>
+                {{ end }}
+            
+            <dt>Locale: {{ .Locale }}</dt>
+            <dt>Internal signature: {{ .InternalSignature }}</dt>
+            <dt>Customer ID: {{ .CustomerID }}</dt>
+            <dt>Delivery service: {{ .DeliveryService }}</dt>
+            <dt>Shard key: {{ .Shardkey }}</dt>
+            <dt>Sm ID: {{ .SmID }}</dt>
+            <dt>Date created: {{ .DateCreated }}</dt>
+            <dt>Oof shard: {{ .OofShard }}</dt>
+        </dl>
+    </main>
+</body>
+
+</html>
