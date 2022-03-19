@@ -1,4 +1,4 @@
-module github.com/ew1l/wb-l0
+module L0
 
 go 1.17
 

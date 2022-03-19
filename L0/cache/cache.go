@@ -1,6 +1,6 @@
 package cache
 
-import "github.com/ew1l/wb-l0/models"
+import "L0/models"
 
 var cache map[string]models.Order
 

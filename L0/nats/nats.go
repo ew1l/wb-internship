@@ -5,9 +5,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/ew1l/wb-l0/cache"
-	"github.com/ew1l/wb-l0/database"
-	"github.com/ew1l/wb-l0/models"
+	"L0/cache"
+	"L0/database"
+	"L0/models"
+
 	"github.com/nats-io/stan.go"
 )
 

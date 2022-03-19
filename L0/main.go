@@ -3,9 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/ew1l/wb-l0/database"
-	"github.com/ew1l/wb-l0/nats"
-	"github.com/ew1l/wb-l0/web/server"
+	"L0/database"
+	"L0/nats"
+	"L0/web/server"
+
 	"github.com/joho/godotenv"
 )
 
