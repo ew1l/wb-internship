@@ -10,8 +10,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ew1l/wb-l2/develop/dev11/handler"
-	"github.com/ew1l/wb-l2/develop/dev11/service"
+	"L2/develop/dev11/handler"
+	"L2/develop/dev11/service"
+
 	"github.com/gorilla/mux"
 )
 

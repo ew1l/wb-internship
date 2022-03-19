@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ew1l/wb-l2/develop/dev10/telnet"
+	"L2/develop/dev10/telnet"
 )
 
 func main() {

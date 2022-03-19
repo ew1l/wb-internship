@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/ew1l/wb-l2/develop/dev08/shell"
-)
+import "L2/develop/dev08/shell"
 
 func main() {
 	s := shell.NewShell()
@@ -31,7 +29,7 @@ func main() {
 // $
 // $ cat ../go.mod
 // module github.com/ew1l/wb-l2/develop/dev08
-// 
+//
 // go 1.17
 // $
 // $ cd ..

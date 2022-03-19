@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/ew1l/wb-l2/develop/dev03/sort"
+	"L2/develop/dev03/sort"
 )
 
 func main() {

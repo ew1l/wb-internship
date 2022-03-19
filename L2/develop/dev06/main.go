@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/ew1l/wb-l2/develop/dev06/cut"
+	"L2/develop/dev06/cut"
 )
 
 func main() {

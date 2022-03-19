@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/ew1l/wb-l2/develop/dev11/service"
+	"L2/develop/dev11/service"
 )
 
 func (h *Handler) result(w http.ResponseWriter, result []*service.Event) {

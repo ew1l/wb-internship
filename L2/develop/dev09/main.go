@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ew1l/wb-l2/develop/dev09/wget"
+	"L2/develop/dev09/wget"
 )
 
 func main() {

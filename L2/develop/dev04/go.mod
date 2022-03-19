@@ -1,4 +1,4 @@
-module github.com/ew1l/wb-l2/develop/dev04
+module L2/develop/dev04
 
 go 1.17
 
