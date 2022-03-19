@@ -1,0 +1,18 @@
+// [b b a][a a]
+
+Тоже самое, что и в 13 вопросе
+При добавлении создается указатель на новый массив, поэтому все изменения вносятся в новый слайс
+
+func main() {
+	slice := []string{"a", "a"}
+
+	slice = func(slice []string) []string {
+		slice = append(slice, "a")
+		slice[0] = "b"
+		slice[1] = "b"
+		fmt.Print(slice)
+
+		return slice
+	}(slice)
+	fmt.Print(slice)
+}

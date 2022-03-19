@@ -1,0 +1,8 @@
+0 байт
+
+func main() {
+	m := make(map[int]struct{})
+	m[1] = struct{}{}
+
+	fmt.Println(unsafe.Sizeof(m[1])) // 0
+}

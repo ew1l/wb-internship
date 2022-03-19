@@ -1,0 +1,41 @@
+func main() {
+	wg := sync.WaitGroup{}
+	for i := 0; i < 5; i++ {
+		wg.Add(1)
+		go func(wg sync.WaitGroup, i int) {
+			fmt.Println(i)
+			wg.Done()
+		}(wg, i)
+	}
+	wg.Wait()
+	fmt.Println("exit")
+}
+
+// 4
+// 1
+// 0
+// 3
+// 2
+// fatal error: all goroutines are asleep - deadlock!
+
+Так как мы передаем копию, а не указатель
+
+func main() {
+	wg := new(sync.WaitGroup)
+	for i := 0; i < 5; i++ {
+		wg.Add(1)
+		go func(wg *sync.WaitGroup, i int) {
+			fmt.Println(i)
+			wg.Done()
+		}(wg, i)
+	}
+	wg.Wait()
+	fmt.Println("exit")
+}
+
+// 4
+// 0
+// 1
+// 2
+// 3
+// exit
