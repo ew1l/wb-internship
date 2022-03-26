@@ -45,7 +45,7 @@ func (s *Sort) Execute() error {
 		return err
 	}
 
-	s.data = strings.Split(string(data), "\r\n")
+	s.data = strings.Split(strings.TrimSpace(string(data)), "\n")
 
 	sort.Slice(s.data, func(i, j int) bool {
 		return strings.Split(s.data[i], " ")[*s.flags.k-1] < strings.Split(s.data[j], " ")[*s.flags.k-1]
